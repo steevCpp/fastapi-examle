@@ -1,6 +1,6 @@
 pipeline{
     environment {
-        registry = 'kaisbettaieb/fastapi-example'
+        registry = 'steevCpp/fastapi-example'
         registryCredential = 'dockerhub-credentials'
         dockerImage = ''
         scannerHome = tool 'SonarQube scanner'
@@ -12,7 +12,7 @@ pipeline{
     stages {
         stage('Clone github repo'){
             steps {
-                git credentialsId: 'github-credentials', url: 'https://github.com/kaisbettaieb/fastapi-examle', branch: 'main'
+                git credentialsId: 'github-credentials', url: 'https://github.com/steevCpp/fastapi-examle', branch: 'main'
             }
         }
 
