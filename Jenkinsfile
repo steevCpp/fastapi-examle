@@ -1,11 +1,6 @@
 pipeline{
     environment {
         registry = 'steevCpp/fastapi-example'
-        registryCredential = 'dockerhub-credentials'
-        dockerImage = ''
-        scannerHome = tool 'SonarQube scanner'
-        sonarToken = credentials('credentials-sonar')
-        build_version = "1+${BUILD_NUMBER}"
     }
     agent any
 
